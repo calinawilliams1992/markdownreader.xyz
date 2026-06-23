@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light;
+  --primary: #f3a04c;
+  --accent: #e58522;
+  --background: #f4f4f6;
+  --card: #ffffff;
+  --text: rgba(0, 0, 0, 0.82);
+  --muted: rgba(0, 0, 0, 0.52);
+  --line: rgba(0, 0, 0, 0.09);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  width: 280px;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.brand-logo {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 7px;
+  object-fit: contain;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+input,
+button {
+  height: 34px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+button {
+  border: 1px solid color-mix(in srgb, var(--primary) 55%, transparent);
+  background: var(--primary);
+  color: #21170e;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: var(--line);
+  background: var(--card);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}

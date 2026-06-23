@@ -1,0 +1,392 @@
+{
+  "siteUrl": "https://www.markdownreader.xyz",
+  "brandName": "Markdown Reader",
+  "ogImagePath": "/assets/markdown-reader-og.png",
+  "routes": {
+    "home.en": {
+      "page": "home",
+      "locale": "en",
+      "path": "/",
+      "htmlLang": "en",
+      "title": "Markdown Reader - Online Markdown Reader with Outline and Export",
+      "description": "Read Markdown files in your browser with smart outlines, GFM, KaTeX, Mermaid, live editing and export to PDF, HTML or clean Markdown. Local-first, no upload needed.",
+      "keywords": "markdown reader, markdown reader online, markdown viewer online, online markdown reader, markdown to PDF export, GFM renderer, KaTeX Markdown, Mermaid Markdown",
+      "ogTitle": "Markdown Reader - Online Markdown Reader",
+      "ogDescription": "Read Markdown files with a clean outline, local-first editing and export to HTML, PDF or clean Markdown.",
+      "ogType": "website",
+      "preloadImagePath": "/assets/markdown-reader-hero.jpg",
+      "alternates": [
+        { "hreflang": "en", "path": "/" },
+        { "hreflang": "zh-CN", "path": "/zh/" },
+        { "hreflang": "x-default", "path": "/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://www.markdownreader.xyz/#website",
+          "name": "Markdown Reader",
+          "alternateName": ["markdownreader.xyz", "Markdown Reader Online"],
+          "url": "https://www.markdownreader.xyz/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://www.markdownreader.xyz/#organization",
+          "name": "Markdown Reader",
+          "url": "https://www.markdownreader.xyz/",
+          "logo": "https://www.markdownreader.xyz/assets/markdown-reader-logo-512.png"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "@id": "https://www.markdownreader.xyz/#app",
+          "name": "Markdown Reader",
+          "description": "A local-first, browser-based Markdown reader for long .md files with smart outlines, KaTeX, Mermaid and one-click PDF, HTML and clean Markdown export.",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Web, Windows, macOS, Linux",
+          "url": "https://www.markdownreader.xyz/app/",
+          "browserRequirements": "Requires a modern browser with JavaScript enabled",
+          "softwareVersion": "1.0",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Open any .md file in the browser",
+            "Smart outline for long documents",
+            "GFM, KaTeX, Mermaid and syntax-highlighted code",
+            "Local-first: no upload required",
+            "Export to PDF, HTML and clean Markdown"
+          ],
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": "https://www.markdownreader.xyz/#faq",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is Markdown Reader different from a regular Markdown editor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Markdown Reader is a reader-first markdown reader. It renders any .md file as a clean web document while keeping the original file as the single source of truth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use Markdown Reader as a markdown viewer online without installing anything?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Markdown Reader runs entirely in the browser at markdownreader.xyz, so you can open .md files instantly on any modern desktop browser."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Markdown Reader support KaTeX and Mermaid?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Markdown Reader supports GFM tables, syntax-highlighted code, KaTeX formulas and Mermaid diagrams out of the box."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my file uploaded to the cloud?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Markdown Reader is a local-first markdown reader; files are read in your browser and only leave the device when you explicitly export."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I export from Markdown Reader to PDF or HTML?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Markdown Reader exports polished PDF and HTML, plus a clean Markdown copy if you need to share the source."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Markdown Reader a good Obsidian or Typora alternative?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For reading long documents, yes. Markdown Reader is not a knowledge base; it is a focused markdown reader for individual files."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Markdown Reader work offline?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Once loaded, Markdown Reader can open and render local .md files without a network connection."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "home.zh": {
+      "page": "home",
+      "locale": "zh",
+      "path": "/zh/",
+      "htmlLang": "zh-CN",
+      "title": "Markdown Reader - 在线 Markdown 阅读器，支持大纲、公式、图表与导出",
+      "description": "在浏览器中打开、阅读和导出 Markdown 文件。支持智能大纲、GFM、KaTeX、Mermaid、实时编辑预览，以及 PDF、HTML 和纯净 Markdown 导出。",
+      "keywords": "Markdown 阅读器, 在线 Markdown 阅读器, md 文件阅读器, Markdown 查看器, Markdown 转 PDF, Markdown 转 HTML, Mermaid Markdown, KaTeX Markdown",
+      "ogTitle": "Markdown Reader - 在线 Markdown 阅读器",
+      "ogDescription": "用清晰大纲、本地编辑和多格式导出读好每一份 Markdown。",
+      "ogType": "website",
+      "preloadImagePath": "/assets/markdown-reader-hero.jpg",
+      "alternates": [
+        { "hreflang": "en", "path": "/" },
+        { "hreflang": "zh-CN", "path": "/zh/" },
+        { "hreflang": "x-default", "path": "/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://www.markdownreader.xyz/zh/#website",
+          "name": "Markdown Reader 中文站",
+          "url": "https://www.markdownreader.xyz/zh/",
+          "inLanguage": "zh-CN",
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://www.markdownreader.xyz/#organization",
+          "name": "Markdown Reader",
+          "url": "https://www.markdownreader.xyz/",
+          "logo": "https://www.markdownreader.xyz/assets/markdown-reader-logo-512.png"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "@id": "https://www.markdownreader.xyz/#app",
+          "name": "Markdown Reader",
+          "description": "一款本地优先、运行在浏览器中的 Markdown 阅读器，适合阅读长 .md 文件，并支持智能大纲、KaTeX、Mermaid 与 PDF、HTML、纯净 Markdown 导出。",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Web, Windows, macOS, Linux",
+          "url": "https://www.markdownreader.xyz/zh/app/",
+          "browserRequirements": "Requires a modern browser with JavaScript enabled",
+          "softwareVersion": "1.0",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "在浏览器中打开本地 .md 文件",
+            "为长文档生成智能大纲",
+            "支持 GFM、KaTeX、Mermaid 和代码高亮",
+            "本地优先，无需上传",
+            "导出 PDF、HTML 和纯净 Markdown"
+          ],
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": "https://www.markdownreader.xyz/zh/#faq",
+          "inLanguage": "zh-CN",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Markdown Reader 和普通 Markdown 编辑器有什么区别？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Markdown Reader 是一款以阅读为核心的 Markdown 阅读器，把 .md 文件渲染成整洁的网页文档，同时保持源文件不被改写。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Markdown Reader 算在线 Markdown 阅读器吗？需要安装吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "是。Markdown Reader 是浏览器内运行的在线 Markdown 阅读器，访问 markdownreader.xyz 即可使用，无需安装任何客户端。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "这款 Markdown 阅读器支持哪些语法？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Markdown Reader 原生支持 GFM、表格、代码高亮、KaTeX 数学公式与 Mermaid 图表。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "文件会被上传到云端吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不会。Markdown Reader 是本地优先的 Markdown 阅读器，文件在浏览器内读取，只有在你主动导出时才离开本机。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Markdown 阅读器能导出 PDF 或 HTML 吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。Markdown Reader 支持导出排版良好的 PDF、HTML，以及一份干净的 Markdown 副本。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "可以替代 Obsidian 或 Typora 用来读长文档吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "用来读单篇长文档可以。Markdown Reader 不是知识库，而是面向单文件的专注型 Markdown 阅读器。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Markdown 阅读器可以离线使用吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "页面加载完成后，这款 Markdown 阅读器可在无网络环境下打开并渲染本地 .md 文件。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "app.en": {
+      "page": "app",
+      "locale": "en",
+      "path": "/app/",
+      "htmlLang": "en",
+      "title": "Open Markdown Reader - Read, Edit & Export .md Files Online",
+      "description": "Open Markdown Reader in your browser to read .md files with smart outlines, edit with live preview, and export to PDF, HTML or clean Markdown - no upload needed.",
+      "keywords": "open markdown reader, markdown reader online, read md file online, markdown editor with preview, markdown to PDF online, markdown to HTML, .md file viewer",
+      "ogTitle": "Open Markdown Reader Online",
+      "ogDescription": "Read, edit and export local .md files in your browser with smart outlines, KaTeX, Mermaid and no upload required.",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/app/" },
+        { "hreflang": "zh-CN", "path": "/zh/app/" },
+        { "hreflang": "x-default", "path": "/app/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "@id": "https://www.markdownreader.xyz/app/#webapp",
+          "name": "Markdown Reader",
+          "url": "https://www.markdownreader.xyz/app/",
+          "inLanguage": "en",
+          "applicationCategory": "ProductivityApplication",
+          "applicationSubCategory": "Markdown Reader",
+          "operatingSystem": "Web",
+          "browserRequirements": "Requires a modern browser with JavaScript enabled",
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Open any local .md file in the browser",
+            "Auto-generated outline for long documents",
+            "GFM, tables and syntax-highlighted code",
+            "KaTeX math and Mermaid diagrams",
+            "Live Markdown editing with preview",
+            "Export to PDF, HTML and clean Markdown",
+            "Local-first, no upload required"
+          ],
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" },
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/#website" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.markdownreader.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "App",
+              "item": "https://www.markdownreader.xyz/app/"
+            }
+          ]
+        }
+      ]
+    },
+    "app.zh": {
+      "page": "app",
+      "locale": "zh",
+      "path": "/zh/app/",
+      "htmlLang": "zh-CN",
+      "title": "打开 Markdown Reader - 在线阅读、编辑与导出 .md 文件",
+      "description": "在浏览器中打开 Markdown Reader，即可在线阅读 .md 文件、查看大纲、实时编辑预览，并一键导出 PDF、HTML 或纯净 Markdown，无需上传。",
+      "keywords": "打开 Markdown Reader, 在线 Markdown 阅读器, md 文件在线打开, Markdown 在线编辑, Markdown 转 PDF 在线, Markdown 转 HTML, .md 文件查看器",
+      "ogTitle": "打开 Markdown Reader 在线应用",
+      "ogDescription": "在浏览器中阅读、编辑和导出本地 .md 文件，支持智能大纲、KaTeX、Mermaid，且无需上传。",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/app/" },
+        { "hreflang": "zh-CN", "path": "/zh/app/" },
+        { "hreflang": "x-default", "path": "/app/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "@id": "https://www.markdownreader.xyz/zh/app/#webapp",
+          "name": "Markdown Reader 在线应用",
+          "url": "https://www.markdownreader.xyz/zh/app/",
+          "inLanguage": "zh-CN",
+          "applicationCategory": "ProductivityApplication",
+          "applicationSubCategory": "Markdown 阅读器",
+          "operatingSystem": "Web",
+          "browserRequirements": "Requires a modern browser with JavaScript enabled",
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "在浏览器中打开本地 .md 文件",
+            "为长文档自动生成大纲",
+            "支持 GFM、表格和代码高亮",
+            "支持 KaTeX 数学公式和 Mermaid 图表",
+            "Markdown 实时编辑与预览",
+            "导出 PDF、HTML 和纯净 Markdown",
+            "本地优先，无需上传"
+          ],
+          "publisher": { "@id": "https://www.markdownreader.xyz/#organization" },
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/zh/#website" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.markdownreader.xyz/zh/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "应用",
+              "item": "https://www.markdownreader.xyz/zh/app/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

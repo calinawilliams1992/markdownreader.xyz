@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markdown Reader Capture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="brand">
+        <img class="brand-logo" src="icons/icon48.png" width="24" height="24" alt="" />
+        <strong>Markdown Reader</strong>
+      </div>
+      <label>
+        App URL
+        <input id="app-url" value="http://127.0.0.1:5173/app/" />
+      </label>
+      <button id="capture-open">抓取并打开</button>
+      <button id="capture-copy">抓取并复制</button>
+      <p id="status">当前页会被转换成 Markdown 片段。</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
