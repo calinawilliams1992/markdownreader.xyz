@@ -21,18 +21,19 @@ Long Markdown documents are scattered across code repositories, research notes, 
 We build an end-to-end processing pipeline that turns raw Markdown into an adaptive visual document structure. The optimization target is:
 
 $$
-L(\\theta) = -\\sum_i \\log p(y_i | x_i; \\theta) + \\lambda\\|\\theta\\|^2
+L(\\theta) = -\\sum_{i} \\log p(y_i \\mid x_i; \\theta) + \\lambda \\lVert \\theta \\rVert^2
 $$
 
 ### Data Flow
 
 \`\`\`mermaid
 flowchart LR
-  A[Import Markdown] --> B[Parse AST]
-  B --> C[Detect document type]
-  C --> D[Apply reading layout]
-  D --> E[Edit and source views]
-  E --> F[HTML / PDF / Markdown export]
+  A[Markdown file] --> B[Parse AST]
+  B --> C[Classify document]
+  C --> D[Choose layout]
+  D --> E[Render reading view]
+  E --> F[Edit and source views]
+  F --> G[HTML / PDF / Markdown export]
 \`\`\`
 
 ### Model Selection
@@ -76,18 +77,19 @@ Markdown Reader 将标准 Markdown 保持为唯一源文件，同时在阅读层
 我们构建一条端到端的数据处理管道，将原始 Markdown 文档转换为语义自适应的可视结构。优化目标如下：
 
 $$
-L(\\theta) = -\\sum_i \\log p(y_i | x_i; \\theta) + \\lambda\\|\\theta\\|^2
+L(\\theta) = -\\sum_{i} \\log p(y_i \\mid x_i; \\theta) + \\lambda \\lVert \\theta \\rVert^2
 $$
 
 ### 数据流
 
 \`\`\`mermaid
 flowchart LR
-  A[导入 Markdown] --> B[解析 AST]
+  A[Markdown 文件] --> B[解析 AST]
   B --> C[识别文档类型]
-  C --> D[应用阅读版式]
-  D --> E[编辑与源码视图]
-  E --> F[HTML / PDF / Markdown 导出]
+  C --> D[选择阅读版式]
+  D --> E[渲染阅读视图]
+  E --> F[编辑与源码视图]
+  F --> G[HTML / PDF / Markdown 导出]
 \`\`\`
 
 ### 模型选型

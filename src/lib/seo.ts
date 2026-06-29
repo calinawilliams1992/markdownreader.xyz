@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import seoData from "../data/seo.json";
 import type { Locale } from "../types";
 
-export type SeoPage = "home" | "app";
+export type SeoPage = "home" | "app" | "privacy" | "terms";
 
 interface AlternateLink {
   hreflang: string;

@@ -26,13 +26,14 @@ export function HomePage({ locale, theme, onThemeToggle }: HomePageProps) {
   const copy = homeCopy[locale];
   const appHref = locale === "zh" ? "/zh/app/" : "/app/";
   const homeHref = locale === "zh" ? "/zh/" : "/";
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="home-page">
       <header className="home-nav">
         <a className="home-brand" href={homeHref} aria-label="Markdown Reader home">
-          <span className="home-brand-mark" aria-hidden="true">
-            <img src="/assets/markdown-reader-logo-96.png" width="28" height="28" alt="" />
+          <span className="home-brand-mark">
+            <img src="/assets/markdown-reader-logo-96.png" width="28" height="28" alt={copy.logoAlt} />
           </span>
           <strong>Markdown Reader</strong>
         </a>
@@ -51,7 +52,7 @@ export function HomePage({ locale, theme, onThemeToggle }: HomePageProps) {
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
           <a className="home-nav-cta" href={appHref}>
-            {copy.cta}
+            {copy.navCta}
           </a>
         </div>
       </header>
@@ -64,7 +65,7 @@ export function HomePage({ locale, theme, onThemeToggle }: HomePageProps) {
             <p className="hero-subtitle">{copy.hero.body}</p>
             <div className="hero-actions">
               <a className="home-button primary" href={appHref}>
-                {copy.cta}
+                {copy.hero.cta}
                 <ArrowRight size={17} />
               </a>
             </div>
@@ -124,7 +125,7 @@ export function HomePage({ locale, theme, onThemeToggle }: HomePageProps) {
           <h2 id="home-final-cta-title">{copy.finalCta.title}</h2>
           <p>{copy.finalCta.body}</p>
           <a className="home-button primary" href={appHref}>
-            {copy.cta}
+            {copy.finalCta.cta}
             <ArrowRight size={17} />
           </a>
         </section>
@@ -147,7 +148,7 @@ export function HomePage({ locale, theme, onThemeToggle }: HomePageProps) {
 
       <footer className="home-footer" aria-label={copy.footer.navLabel}>
         <div className="footer-bottom">
-          <p>{copy.footer.rights}</p>
+          <p>{copy.footer.rights.replace("{year}", String(currentYear))}</p>
           <div className="footer-bottom-links">
             {copy.footer.bottomLinks.map((link) => (
               <a
@@ -173,7 +174,7 @@ function HeroVisual({ locale }: { locale: Locale }) {
       : "Markdown Reader interface with rendered document, outline and export controls";
   return (
     <figure className="hero-media">
-      <img src="/assets/markdown-reader-hero.jpg" width="1672" height="941" alt={alt} fetchPriority="high" />
+      <img src="/assets/markdown-reader-hero.jpg" width="1672" height="941" alt={alt} loading="eager" decoding="async" fetchPriority="high" />
     </figure>
   );
 }
@@ -200,21 +201,24 @@ function FeatureLine({
 
 const homeCopy = {
   en: {
-    cta: "Get Started Free",
+    logoAlt: "Markdown Reader logo",
+    navCta: "Launch Reader",
     themeToggle: "Toggle theme",
     hero: {
       kicker: "The Markdown Reader for Long Documents",
       title: "Read Every Markdown File Better",
-      body: "Import any .md file with auto layout, smart outline, local editing and export. Your source stays intact."
+      body: "Import any .md file with auto layout, smart outline, local editing and export. Your source stays intact.",
+      cta: "Open Your First .md"
     },
     finalCta: {
       title: "Open a Markdown File in Seconds",
-      body: "Start in the browser with a local file, then read, edit and export when the document is ready."
+      body: "Start in the browser with a local file, then read, edit and export when the document is ready.",
+      cta: "Try the Sample"
     },
     workflowTitle: "A Complete Path from Import to Export",
     workflowBody: "Move from raw Markdown to a readable document without migrating into a knowledge base.",
     workflows: [
-      { title: "Import", body: "Drag in a .md file, paste a README, or capture a page with the browser extension.", icon: UploadCloud },
+      { title: "Import", body: "Drag in a .md file, paste a README, or start with the sample document.", icon: UploadCloud },
       { title: "Read", body: "Use generated outlines, readable typography, KaTeX formulas, Mermaid diagrams and highlighted code.", icon: PanelLeft },
       { title: "Edit", body: "Switch into a focused Markdown editing surface with a live rendered preview.", icon: MessageSquareText },
       { title: "Export", body: "Take the result as HTML, PDF or clean Markdown while keeping the original format portable.", icon: Download }
@@ -262,7 +266,7 @@ const homeCopy = {
       },
       {
         q: "Is Markdown Reader a good Obsidian or Typora alternative?",
-        a: "For reading long documents, yes. Markdown Reader is not a knowledge base; it is a focused markdown reader for individual files."
+        a: "For reading long documents, yes. Obsidian is a knowledge base, Typora is a local editor, and Markdown Reader is for single-file reading plus export."
       },
       {
         q: "Does Markdown Reader work offline?",
@@ -271,30 +275,34 @@ const homeCopy = {
     ],
     footer: {
       navLabel: "Footer navigation",
-      rights: "© 2026 Markdown Reader. All Rights Reserved.",
+      rights: "© 2024-{year} Markdown Reader. All Rights Reserved.",
       bottomLinks: [
-        { label: "Privacy", href: "#privacy" },
-        { label: "GitHub", href: "https://github.com/", external: true },
+        { label: "Privacy", href: "/privacy/" },
+        { label: "Terms", href: "/terms/" },
+        { label: "GitHub", href: "https://github.com/calinawilliams1992/markdownreader.xyz", external: true },
         { label: "Email", href: "mailto:calinawilliams1992@gmail.com" }
       ]
     }
   },
   zh: {
-    cta: "免费开始",
+    logoAlt: "Markdown Reader 标志",
+    navCta: "打开阅读器",
     themeToggle: "切换主题",
     hero: {
       kicker: "面向长文档的 Markdown 阅读器",
       title: "读好每一份 Markdown",
-      body: "导入任意 .md，获得自动排版、智能大纲、本地编辑和多格式导出。源文件始终保持标准文本。"
+      body: "导入任意 .md，获得自动排版、智能大纲、本地编辑和多格式导出。源文件始终保持标准文本。",
+      cta: "打开第一份 .md"
     },
     finalCta: {
       title: "打开文件，马上开始阅读",
-      body: "在浏览器中处理本地 Markdown，读清楚后再编辑和导出。"
+      body: "在浏览器中处理本地 Markdown，读清楚后再编辑和导出。",
+      cta: "试用示例文档"
     },
     workflowTitle: "从导入到导出的完整路径",
     workflowBody: "把原始 Markdown 变成清晰可读的文档，不需要迁移到知识库。",
     workflows: [
-      { title: "导入", body: "拖入 .md 文件，粘贴 README，或用浏览器扩展抓取页面。", icon: UploadCloud },
+      { title: "导入", body: "拖入 .md 文件，粘贴 README，或从示例文档开始。", icon: UploadCloud },
       { title: "阅读", body: "使用自动大纲、清晰排版、KaTeX 公式、Mermaid 图表和代码高亮。", icon: PanelLeft },
       { title: "编辑", body: "切换到聚焦的 Markdown 编辑界面，并同步查看渲染预览。", icon: MessageSquareText },
       { title: "导出", body: "导出 HTML、PDF 或纯净 Markdown，保持内容可移植。", icon: Download }
@@ -342,7 +350,7 @@ const homeCopy = {
       },
       {
         q: "可以替代 Obsidian 或 Typora 用来读长文档吗？",
-        a: "用来读单篇长文档可以。Markdown Reader 不是知识库，而是面向单文件的专注型 Markdown 阅读器。"
+        a: "适合用来读单篇长文档。Obsidian 是知识库，Typora 是本地编辑器，Markdown Reader 是单文件阅读加导出工具。"
       },
       {
         q: "Markdown 阅读器可以离线使用吗？",
@@ -351,10 +359,11 @@ const homeCopy = {
     ],
     footer: {
       navLabel: "页脚导航",
-      rights: "© 2026 Markdown Reader. All Rights Reserved.",
+      rights: "© 2024-{year} Markdown Reader. All Rights Reserved.",
       bottomLinks: [
-        { label: "隐私", href: "#privacy" },
-        { label: "GitHub", href: "https://github.com/", external: true },
+        { label: "隐私", href: "/zh/privacy/" },
+        { label: "条款", href: "/zh/terms/" },
+        { label: "GitHub", href: "https://github.com/calinawilliams1992/markdownreader.xyz", external: true },
         { label: "邮箱", href: "mailto:calinawilliams1992@gmail.com" }
       ]
     }

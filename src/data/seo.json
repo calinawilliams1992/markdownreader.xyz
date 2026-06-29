@@ -115,7 +115,7 @@
               "name": "Is Markdown Reader a good Obsidian or Typora alternative?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "For reading long documents, yes. Markdown Reader is not a knowledge base; it is a focused markdown reader for individual files."
+                "text": "For reading long documents, yes. Obsidian is a knowledge base, Typora is a local editor, and Markdown Reader is for single-file reading plus export."
               }
             },
             {
@@ -241,7 +241,7 @@
               "name": "可以替代 Obsidian 或 Typora 用来读长文档吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "用来读单篇长文档可以。Markdown Reader 不是知识库，而是面向单文件的专注型 Markdown 阅读器。"
+                "text": "适合用来读单篇长文档。Obsidian 是知识库，Typora 是本地编辑器，Markdown Reader 是单文件阅读加导出工具。"
               }
             },
             {
@@ -383,6 +383,198 @@
               "position": 2,
               "name": "应用",
               "item": "https://www.markdownreader.xyz/zh/app/"
+            }
+          ]
+        }
+      ]
+    },
+    "privacy.en": {
+      "page": "privacy",
+      "locale": "en",
+      "path": "/privacy/",
+      "htmlLang": "en",
+      "title": "Privacy Policy - Markdown Reader",
+      "description": "Learn how Markdown Reader handles local Markdown files, browser storage, analytics, browser extension permissions and export data flow.",
+      "keywords": "Markdown Reader privacy policy, markdown reader local files, local-first markdown reader privacy, markdown export privacy",
+      "ogTitle": "Markdown Reader Privacy Policy",
+      "ogDescription": "Markdown Reader is local-first. Learn what stays in your browser and what can leave it.",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/privacy/" },
+        { "hreflang": "zh-CN", "path": "/zh/privacy/" },
+        { "hreflang": "x-default", "path": "/privacy/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.markdownreader.xyz/privacy/#webpage",
+          "name": "Privacy Policy",
+          "url": "https://www.markdownreader.xyz/privacy/",
+          "inLanguage": "en",
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/#website" },
+          "about": { "@id": "https://www.markdownreader.xyz/#app" },
+          "dateModified": "2026-06-29"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.markdownreader.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Privacy",
+              "item": "https://www.markdownreader.xyz/privacy/"
+            }
+          ]
+        }
+      ]
+    },
+    "privacy.zh": {
+      "page": "privacy",
+      "locale": "zh",
+      "path": "/zh/privacy/",
+      "htmlLang": "zh-CN",
+      "title": "隐私政策 - Markdown Reader",
+      "description": "了解 Markdown Reader 如何处理本地 Markdown 文件、浏览器存储、访问统计、浏览器扩展权限和导出数据流。",
+      "keywords": "Markdown Reader 隐私政策, Markdown 阅读器 本地文件, 本地优先 Markdown 隐私, Markdown 导出隐私",
+      "ogTitle": "Markdown Reader 隐私政策",
+      "ogDescription": "Markdown Reader 以本地优先为核心。了解哪些内容留在浏览器中，哪些情况可能离开浏览器。",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/privacy/" },
+        { "hreflang": "zh-CN", "path": "/zh/privacy/" },
+        { "hreflang": "x-default", "path": "/privacy/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.markdownreader.xyz/zh/privacy/#webpage",
+          "name": "隐私政策",
+          "url": "https://www.markdownreader.xyz/zh/privacy/",
+          "inLanguage": "zh-CN",
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/zh/#website" },
+          "about": { "@id": "https://www.markdownreader.xyz/#app" },
+          "dateModified": "2026-06-29"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.markdownreader.xyz/zh/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "隐私政策",
+              "item": "https://www.markdownreader.xyz/zh/privacy/"
+            }
+          ]
+        }
+      ]
+    },
+    "terms.en": {
+      "page": "terms",
+      "locale": "en",
+      "path": "/terms/",
+      "htmlLang": "en",
+      "title": "Terms of Use - Markdown Reader",
+      "description": "Review the basic terms for using Markdown Reader to read, edit and export Markdown files in your browser.",
+      "keywords": "Markdown Reader terms, markdown reader terms of use, markdown export terms, markdown reader legal",
+      "ogTitle": "Markdown Reader Terms of Use",
+      "ogDescription": "Terms for using Markdown Reader to open, read, edit and export Markdown files in your browser.",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/terms/" },
+        { "hreflang": "zh-CN", "path": "/zh/terms/" },
+        { "hreflang": "x-default", "path": "/terms/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.markdownreader.xyz/terms/#webpage",
+          "name": "Terms of Use",
+          "url": "https://www.markdownreader.xyz/terms/",
+          "inLanguage": "en",
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/#website" },
+          "about": { "@id": "https://www.markdownreader.xyz/#app" },
+          "dateModified": "2026-06-29"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.markdownreader.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Terms",
+              "item": "https://www.markdownreader.xyz/terms/"
+            }
+          ]
+        }
+      ]
+    },
+    "terms.zh": {
+      "page": "terms",
+      "locale": "zh",
+      "path": "/zh/terms/",
+      "htmlLang": "zh-CN",
+      "title": "使用条款 - Markdown Reader",
+      "description": "查看使用 Markdown Reader 在浏览器中阅读、编辑和导出 Markdown 文件的基本条款。",
+      "keywords": "Markdown Reader 使用条款, Markdown 阅读器 条款, Markdown 导出条款, Markdown Reader 法律",
+      "ogTitle": "Markdown Reader 使用条款",
+      "ogDescription": "使用 Markdown Reader 在浏览器中打开、阅读、编辑和导出 Markdown 文件的基本条款。",
+      "ogType": "website",
+      "alternates": [
+        { "hreflang": "en", "path": "/terms/" },
+        { "hreflang": "zh-CN", "path": "/zh/terms/" },
+        { "hreflang": "x-default", "path": "/terms/" }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.markdownreader.xyz/zh/terms/#webpage",
+          "name": "使用条款",
+          "url": "https://www.markdownreader.xyz/zh/terms/",
+          "inLanguage": "zh-CN",
+          "isPartOf": { "@id": "https://www.markdownreader.xyz/zh/#website" },
+          "about": { "@id": "https://www.markdownreader.xyz/#app" },
+          "dateModified": "2026-06-29"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.markdownreader.xyz/zh/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "使用条款",
+              "item": "https://www.markdownreader.xyz/zh/terms/"
             }
           ]
         }

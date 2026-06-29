@@ -28,7 +28,7 @@ export function MarkdownViewport({
   const rootRef = useRef<HTMLElement | null>(null);
   const reading = useMemo(() => estimateReadingTime(markdown), [markdown]);
   const slug = createHeadingSlugger();
-  const meta = locale === "zh" ? { sections: "节", minutes: "分钟阅读" } : { sections: "sections", minutes: "min read" };
+  const meta = locale === "zh" ? { headings: "个标题", minutes: "分钟阅读" } : { headings: "headings", minutes: "min read" };
 
   useEffect(() => {
     if (!rootRef.current || !onActiveHeading) return;
@@ -54,7 +54,7 @@ export function MarkdownViewport({
       {!compact ? (
         <div className="reader-meta">
           <span>
-            {outline.length || 1} {meta.sections}
+            {outline.length || 1} {meta.headings}
           </span>
           <span>
             {reading.minutes} {meta.minutes}
@@ -64,7 +64,7 @@ export function MarkdownViewport({
       ) : null}
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex, rehypeHighlight]}
+        rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: "ignore" }], rehypeHighlight]}
         components={{
           h1: createHeading("h1", slug, activeHeading),
           h2: createHeading("h2", slug, activeHeading),

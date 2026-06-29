@@ -5,6 +5,7 @@ import { EditorWorkspace } from "./components/EditorWorkspace";
 import { HomePage } from "./components/HomePage";
 import { ImportPanel } from "./components/ImportPanel";
 import { LeftSidebar } from "./components/LeftSidebar";
+import { LegalPage, type LegalPageKind } from "./components/LegalPage";
 import { TopBar } from "./components/TopBar";
 import { sampleFileName, sampleMarkdown } from "./data/sampleMarkdown";
 import { buildOutline, estimateReadingTime } from "./lib/markdown";
@@ -16,9 +17,10 @@ export function App() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   const locale: Locale = path.startsWith("/zh") ? "zh" : "en";
   const isReaderRoute = path === "/app" || path === "/zh/app" || window.location.hash.startsWith("#import=");
+  const legalPage = getLegalPage(path);
   const [theme, setTheme] = useState<ThemeMode>(() => readTheme());
 
-  useSeoMeta(isReaderRoute ? "app" : "home", locale);
+  useSeoMeta(isReaderRoute ? "app" : legalPage || "home", locale);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -30,6 +32,9 @@ export function App() {
   }
 
   if (!isReaderRoute) {
+    if (legalPage) {
+      return <LegalPage locale={locale} page={legalPage} theme={theme} onThemeToggle={toggleTheme} />;
+    }
     return <HomePage locale={locale} theme={theme} onThemeToggle={toggleTheme} />;
   }
 
@@ -402,6 +407,12 @@ function readHashImport() {
   } catch {
     return "";
   }
+}
+
+function getLegalPage(path: string): LegalPageKind | null {
+  if (path === "/privacy" || path === "/zh/privacy") return "privacy";
+  if (path === "/terms" || path === "/zh/terms") return "terms";
+  return null;
 }
 
 function readTheme(): ThemeMode {

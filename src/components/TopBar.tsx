@@ -21,6 +21,7 @@ interface TopBarProps {
 
 const copy = {
   en: {
+    logoAlt: "Markdown Reader logo",
     read: "Read",
     edit: "Edit",
     source: "Source",
@@ -38,6 +39,7 @@ const copy = {
     ] satisfies ExportChoice[]
   },
   zh: {
+    logoAlt: "Markdown Reader 标志",
     read: "阅读",
     edit: "编辑",
     source: "源码",
@@ -78,8 +80,8 @@ export function TopBar({
     <header className="topbar">
       <div className="topbar-left">
         <a className="brand-lockup" href={locale === "zh" ? "/zh/" : "/"} aria-label="Markdown Reader home">
-          <span className="brand-mark" aria-hidden="true">
-            <img src="/assets/markdown-reader-logo-96.png" width="24" height="24" alt="" />
+          <span className="brand-mark">
+            <img src="/assets/markdown-reader-logo-96.png" width="24" height="24" alt={text.logoAlt} />
           </span>
           <span className="brand-name">Markdown Reader</span>
         </a>

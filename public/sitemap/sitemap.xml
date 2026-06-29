@@ -33,4 +33,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.markdownreader.xyz/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.markdownreader.xyz/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.markdownreader.xyz/zh/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.markdownreader.xyz/privacy/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.markdownreader.xyz/zh/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.markdownreader.xyz/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.markdownreader.xyz/zh/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.markdownreader.xyz/privacy/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.markdownreader.xyz/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.markdownreader.xyz/terms/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.markdownreader.xyz/zh/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.markdownreader.xyz/terms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.markdownreader.xyz/zh/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.markdownreader.xyz/terms/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.markdownreader.xyz/zh/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.markdownreader.xyz/terms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
