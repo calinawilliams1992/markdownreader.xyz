@@ -29,12 +29,15 @@ const data = seoData as {
   siteUrl: string;
   brandName: string;
   ogImagePath: string;
+  twitterImagePath?: string;
   routes: Record<string, SeoRoute>;
 };
 
 export const SITE_URL = data.siteUrl;
 export const BRAND_NAME = data.brandName;
 export const OG_IMAGE_URL = absoluteUrl(data.ogImagePath);
+export const TWITTER_IMAGE_URL = absoluteUrl(data.twitterImagePath || data.ogImagePath);
+const SOCIAL_IMAGE_ALT = "Markdown Reader social preview showing the app interface, outline, local-first reading and export.";
 
 export function getSeoRoute(page: SeoPage, locale: Locale) {
   return data.routes[`${page}.${locale}`];
@@ -60,13 +63,18 @@ export function useSeoMeta(page: SeoPage, locale: Locale) {
     setMeta("og:title", route.ogTitle, "property");
     setMeta("og:description", route.ogDescription, "property");
     setMeta("og:image", OG_IMAGE_URL, "property");
+    setMeta("og:image:width", "1200", "property");
+    setMeta("og:image:height", "630", "property");
+    setMeta("og:image:type", "image/png", "property");
+    setMeta("og:image:alt", SOCIAL_IMAGE_ALT, "property");
     setMeta("og:url", canonical, "property");
     setMeta("og:type", route.ogType, "property");
     setMeta("og:site_name", BRAND_NAME, "property");
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", route.ogTitle);
     setMeta("twitter:description", route.ogDescription);
-    setMeta("twitter:image", OG_IMAGE_URL);
+    setMeta("twitter:image", TWITTER_IMAGE_URL);
+    setMeta("twitter:image:alt", SOCIAL_IMAGE_ALT);
 
     setCanonical(canonical);
     setAlternates(route.alternates);

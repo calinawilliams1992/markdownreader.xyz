@@ -23,7 +23,10 @@ function renderRouteHtml(html, route) {
 function stripSeoTags(html) {
   return html
     .replace(/\s*<title>[\s\S]*?<\/title>\s*/gi, "\n")
-    .replace(/\s*<meta\b[^>]*(?:name|property)=["'](?:description|keywords|robots|og:title|og:description|og:image|og:url|og:type|og:site_name|twitter:card|twitter:title|twitter:description|twitter:image)["'][^>]*>\s*/gi, "\n")
+    .replace(
+      /\s*<meta\b[^>]*(?:name|property)=["'](?:description|keywords|robots|og:title|og:description|og:image|og:image:width|og:image:height|og:image:type|og:image:alt|og:url|og:type|og:site_name|twitter:card|twitter:title|twitter:description|twitter:image|twitter:image:alt)["'][^>]*>\s*/gi,
+      "\n"
+    )
     .replace(/\s*<link\b[^>]*rel=["'](?:canonical|alternate)["'][^>]*>\s*/gi, "\n")
     .replace(/\s*<link\b(?=[^>]*rel=["']preload["'])(?=[^>]*as=["']image["'])[^>]*>\s*/gi, "\n")
     .replace(/\s*<script\b(?=[^>]*type=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>\s*/gi, "\n");
@@ -32,6 +35,8 @@ function stripSeoTags(html) {
 function buildSeoHead(route) {
   const canonical = absoluteUrl(route.path);
   const ogImage = absoluteUrl(seoData.ogImagePath);
+  const twitterImage = absoluteUrl(seoData.twitterImagePath || seoData.ogImagePath);
+  const socialImageAlt = "Markdown Reader social preview showing the app interface, outline, local-first reading and export.";
   const lines = [
     `    <title>${escapeHtml(route.title)}</title>`,
     `    <meta name="description" content="${escapeAttribute(route.description)}" />`,
@@ -43,13 +48,18 @@ function buildSeoHead(route) {
     `    <meta property="og:title" content="${escapeAttribute(route.ogTitle)}" />`,
     `    <meta property="og:description" content="${escapeAttribute(route.ogDescription)}" />`,
     `    <meta property="og:image" content="${ogImage}" />`,
+    `    <meta property="og:image:width" content="1200" />`,
+    `    <meta property="og:image:height" content="630" />`,
+    `    <meta property="og:image:type" content="image/png" />`,
+    `    <meta property="og:image:alt" content="${escapeAttribute(socialImageAlt)}" />`,
     `    <meta property="og:url" content="${canonical}" />`,
     `    <meta property="og:type" content="${escapeAttribute(route.ogType)}" />`,
     `    <meta property="og:site_name" content="${escapeAttribute(seoData.brandName)}" />`,
     `    <meta name="twitter:card" content="summary_large_image" />`,
     `    <meta name="twitter:title" content="${escapeAttribute(route.ogTitle)}" />`,
     `    <meta name="twitter:description" content="${escapeAttribute(route.ogDescription)}" />`,
-    `    <meta name="twitter:image" content="${ogImage}" />`,
+    `    <meta name="twitter:image" content="${twitterImage}" />`,
+    `    <meta name="twitter:image:alt" content="${escapeAttribute(socialImageAlt)}" />`,
     ...route.jsonLd.map((item, index) => `    <script type="application/ld+json" data-seo-json-ld="${index + 1}">${escapeScriptJson(item)}</script>`)
   ];
 

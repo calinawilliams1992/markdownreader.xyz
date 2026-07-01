@@ -2,6 +2,7 @@
   "siteUrl": "https://www.markdownreader.xyz",
   "brandName": "Markdown Reader",
   "ogImagePath": "/assets/markdown-reader-og.png",
+  "twitterImagePath": "/assets/markdown-reader-twitter.jpeg",
   "routes": {
     "home.en": {
       "page": "home",
